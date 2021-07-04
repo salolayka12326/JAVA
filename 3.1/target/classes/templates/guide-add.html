@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавление</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="guide mt-5">
+    <h1>Добавление мода.</h1>
+
+    <form action="/guide-main/add" method="post">
+        <input type="text" name="title" placeholder="Название мода." class="form-control">
+        <input type="text" name="anons" placeholder="Краткое описание." class="form-control">
+        <textarea type="text" name="full" placeholder="Описание." class="form-control"></textarea>
+        <button type="submit" class="btn btn-success">Добавить мод.</button>
+
+
+    </form>
+</div>
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
